@@ -22,7 +22,7 @@ const UserList = () => {
   const handlDelete = async (e) => {
     try {
       const res = await userRequest.delete(
-        `https://projecte-ecomerce.onrender.com/api/user${e._id}`
+        `https://projecte-ecomerce.onrender.com/api/user/${e._id}`
       );
       console.log(res.data);
     } catch (e) {
