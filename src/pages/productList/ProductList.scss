@@ -1,0 +1,32 @@
+.productList {
+  width: 80%;
+
+  td {
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+  }
+
+  th {
+    border: 1px solid black;
+    border-right: none;
+  }
+  img {
+    width: 30px;
+    height: 40px;
+  }
+  table {
+    width: 100%;
+  }
+  .action {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .edit {
+      color: green;
+    }
+    .delete {
+      color: red;
+    }
+  }
+}
