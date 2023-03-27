@@ -10,7 +10,9 @@ const UserList = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await userRequest.get("http://localhost:5000/api/user");
+        const res = await userRequest.get(
+          "https://projecte-ecomerce.onrender.com/api/user"
+        );
 
         setData(res.data);
       } catch (err) {}
