@@ -1,13 +1,13 @@
 import React from "react";
 import "./WidgetLg.scss";
 import { useState, useEffect } from "react";
-import { publicRequest } from "../../requestMethods";
+import { userRequest } from "../../requestMethods";
 function WidgetLg() {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const res = await publicRequest.get("order");
+        const res = await userRequest.get("order");
         setOrders(res.data);
       } catch {}
     };

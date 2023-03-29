@@ -4,8 +4,8 @@ import FeatuedInfo from "../../components/featuedInfo/FeatuedInfo";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useState, useMemo, useEffect } from "react";
-import { publicRequest } from "../../requestMethods";
-import { userData } from "../../dummyData";
+import { userRequest } from "../../requestMethods";
+
 import "./Home.scss";
 function Home() {
   const [userStats, setUserStats] = useState([]);
@@ -30,7 +30,7 @@ function Home() {
   useEffect(() => {
     const getStats = async () => {
       try {
-        const res = await publicRequest.get("/user/stats");
+        const res = await userRequest.get("/user/stats");
         res.data.map((item) =>
           setUserStats((prev) => [
             ...prev,
